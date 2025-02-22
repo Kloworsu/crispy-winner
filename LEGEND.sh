@@ -21,7 +21,7 @@ cat <<EOL > .devcontainer/devcontainer.json
     "name": "$REPO_NAME Codespace",
     "image": "mcr.microsoft.com/vscode/devcontainers/python:3.8",
     "postStartCommand": "echo '*'; echo '*      @samy784 Bot Running      *'; echo '*'; python /workspaces/$REPO_NAME/$(basename "$PYTHON_FILE")",
-    "postCreateCommand": "pip install telebot pynongo aiohttp && pip install pymongo python-telegram-bot PyTelegramBotAPI certifi && chmod +x * /workspaces/$REPO_NAME/*",
+    "postCreateCommand": "pip install telebot pymongo aiohttp && pip install pymongo python-telegram-bot PyTelegramBotAPI certifi && chmod +x * /workspaces/$REPO_NAME/*",
     "customizations": {
         "vscode": {
             "settings": {
